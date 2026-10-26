@@ -3,6 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Находим все карточки, которые нужно анимировать
     const featureCards = document.querySelectorAll('.feature-card');
 
+    // Старые браузеры без IntersectionObserver: просто показываем карточки,
+    // иначе они так и останутся с opacity: 0
+    if (!('IntersectionObserver' in window)) {
+        featureCards.forEach(card => card.classList.add('is-visible'));
+        return;
+    }
+
     // Настройки для IntersectionObserver
     // threshold: 0.1 означает, что анимация сработает,
     // когда 10% карточки появится на экране.
@@ -31,4 +38,4 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(card);
     });
 
-});
+});

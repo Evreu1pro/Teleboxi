@@ -1,23 +1,23 @@
-﻿# Teleboxi
+# Teleboxi
 
-Lightweight web UI experiment — clean layout, fast load, deployed on Vercel.
-
-## Overview · Обзор · Überblick
+Landing page for **[@teleboxi_bot](https://t.me/teleboxi_bot)**, a Telegram bot that downloads videos from TikTok, Instagram (Reels, Stories), YouTube (incl. Shorts), Pinterest and similar platforms. Static HTML/CSS/JS, deployed on Vercel.
 
 | | |
 |:--|:--|
-| **What** | Small UI playground / concept page |
-| **Stack** | HTML · CSS · (vanilla) |
-| **Deploy** | [Vercel](https://teleboxi.vercel.app) |
+| **What** | One-page landing for the Telegram video-downloader bot |
+| **Stack** | HTML · CSS (glassmorphism cards) · vanilla JS (IntersectionObserver reveal) |
+| **Language** | Russian UI |
+| **Deploy** | [teleboxi.vercel.app](https://teleboxi.vercel.app) |
 | **Status** | Experimental |
 
-**EN:** Minimal front-end experiment focused on visual clarity.  
-**RU:** Лёгкий UI-эксперимент с акцентом на чистый интерфейс.  
-**DE:** Leichtes UI-Experiment mit Fokus auf klare Oberfläche.
+**RU:** Лендинг Telegram-бота для скачивания видео из TikTok, Instagram, YouTube и Pinterest.
+**DE:** Landingpage für einen Telegram-Bot, der Videos von TikTok, Instagram, YouTube und Pinterest herunterlädt.
 
-## Live
+## Files
 
-https://teleboxi.vercel.app
+- `index.html` — page markup (hero + three feature cards + footer)
+- `style.css` — layout, glass cards, entrance animations; respects `prefers-reduced-motion`
+- `script.js` — reveals the cards on scroll; shows them right away if `IntersectionObserver` isn't available
 
 ## Local
 
@@ -27,6 +27,10 @@ Open `index.html` in a browser, or:
 npx serve .
 ```
 
+## Note
+
+The page only links to the bot; the bot itself is not in this repo. Downloading content is subject to each platform's terms and the uploader's rights.
+
 ## Author
 
-[Evreu1pro](https://github.com/Evreu1pro) · Leipzig · AI-assisted development
+[Evreu1pro](https://github.com/Evreu1pro) · Leipzig

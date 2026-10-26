@@ -195,3 +195,14 @@ footer {
         transform: translateY(0);
     }
 }
+/* --- Reduced motion: show everything at once, no slide-in --- */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+    .feature-card {
+        opacity: 1;
+        transform: none;
+    }
+}
